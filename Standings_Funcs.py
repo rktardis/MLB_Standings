@@ -3,10 +3,15 @@
 """
 Created on Wed Aug 23 15:21:15 2023
 
-@author: richard
+@author: rktardis
 """
 
 from pybaseball import schedule_and_record as snr
+import pandas as pd
+import seaborn as sns
+# =============================================================================
+# from datetime import date
+# =============================================================================
 
 def to_500 (y,t):
     res=snr(y,t)
@@ -40,3 +45,17 @@ def grph (y,t):
     res=res[["Game No.","Record","Team"]]
     return res
 
+def div_graph(y,d):
+    graph=pd.DataFrame({"Game No.":[],"Record":[]})
+    for t in d:
+        graph=graph.append(grph(y,t))
+        
+    graph=graph.reset_index().drop(columns="index")    
+    sns.set_theme(rc={'figure.dpi': 600}) 
+    ttl="MLB Records ("+str(y)+")"
+    sns.lineplot(data=graph,x="Game No.",y="Record",hue="Team").set(title=ttl)
+# =============================================================================
+#     nme=d+"_graph_"+str(date.today())
+#     fig.saveplot(nme)
+# =============================================================================
+    graph=pd.DataFrame({"Game No.":[],"Record":[]})

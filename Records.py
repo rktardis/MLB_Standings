@@ -20,8 +20,6 @@ NL_C=["STL","MIL","CHC","CIN","PIT"]
 AL=[AL_W,AL_C,AL_E]
 NL=[NL_W,NL_C,NL_E]
 MLB=AL+NL
-
-all_div=[AL_W,NL_W,AL_C,NL_C,AL_E,NL_E,NL,AL,MLB]
 #Builds lists of teams in each division, league, and one of all baseball
 
 #%%
