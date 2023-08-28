@@ -5,13 +5,9 @@ Created on Sat Aug 26 17:03:29 2023
 
 @author: rktardis
 """
-
+#%% Imports & Lists
 import Standings_Funcs as sf
 import pandas as pd
-# =============================================================================
-# from datetime import date
-# =============================================================================
-
 AL_W=["TEX","HOU","OAK","LAA","SEA"]
 NL_W=["SF","ARI","LAD","SD","COL"]
 AL_E=["NYY","BAL","TB","BOS","TOR"]
@@ -22,18 +18,9 @@ AL=[AL_W,AL_C,AL_E]
 NL=[NL_W,NL_C,NL_E]
 MLB=AL+NL
 #Builds lists of teams in each division, league, and one of all baseball
-
 #%% Inputs
 Division=AL_W
-Year=2014
-# =============================================================================
-# Filename="AL_West"
-# =============================================================================
-
+Year=2001
 #%% Output
 graph=pd.DataFrame({"Game No.":[],"Record":[]})
 fig=sf.div_graph(Year,Division)
-# =============================================================================
-# Filename=Filename+"_"+str(date.today())
-# fig.savefile(Filename)
-# =============================================================================
