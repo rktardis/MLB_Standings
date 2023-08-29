@@ -22,7 +22,7 @@ div_graph takes in a year and a list containing the abbrevation of several teams
 This scripts outlines a list of the team abbreviations for each division, league, and MLB at large, then takes in a division/league/MLB and a year, then uses the div_graphs(y,d) function from Standings_Funcs.py to generate a graph for that division and year.
 
 ### Record_Save.py
-This script uses the pybaseball snr function to save all the outputs for a specific team to a .csv file
+This script uses the pybaseball snr function to save all the outputs for a specific team to a .csv file.
 
 
 
