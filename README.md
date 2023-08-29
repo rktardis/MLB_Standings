@@ -19,11 +19,10 @@ grph again works the same way as to_500, but additionally outputs a column conta
 div_graph takes in a year and a list containing the abbrevation of several teams. It then loops through that list using the grph(y,t) function, and creates a dataframe containing the records of the teams in that list, then generates a graph using seaborn from that dataframe, and saving the graph.
 
 ### Graph_Generator.py
-This scripts outlines a list of the team abbreviations for each division, league, and MLB at large, then takes in a division/league/MLB and a year, then uses the div_graphs(y,d) function from Standings_Funcs.py to generate a graph for that division and year.
+This scripts outlines a list of the team abbreviations for each division, league, and MLB at large, then takes in a division/league/MLB and a year, then uses the div_graphs(y,d) function from Standings_Funcs.py to generate a graph for that division and year. An example for the American League West from August 28th, 2023 is below:
+![alt text](https://github.com/rktardis/MLB_Standings/blob/main/Ex_AL_West_Standings_08_28_23.png)
 
 ### Record_Save.py
 This script uses the pybaseball snr function to save all the outputs for a specific team to a .csv file.
-
-
 
 [^1]: Each team has either a two [2] or three [3] letter abbreviation (i.e. "SEA" for the Seattle Mariners or "SF" for the San Fransisco Giants)
