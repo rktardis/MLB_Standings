@@ -20,7 +20,7 @@ MLB=AL+NL
 #Builds lists of teams in each division, league, and one of all baseball
 #%% Inputs
 Division=AL_W
-Year=2001
+Year=2023
 #%% Output
 graph=pd.DataFrame({"Game No.":[],"Record":[]})
 fig=sf.div_graph(Year,Division)

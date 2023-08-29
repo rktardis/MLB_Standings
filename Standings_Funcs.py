@@ -49,8 +49,11 @@ def div_graph(y,d):
         graph=graph.append(grph(y,t))
     graph=graph.reset_index().drop(columns="index")    
     sns.set_theme(rc={'figure.dpi': 600}) 
-    ttl="MLB Records ("+str(y)+")"
+    ttl="Records ("+str(y)+")"
+    sns.set_theme(rc={'figure.dpi': 600}) 
     sns.lineplot(data=graph,x="Game No.",y="Record",hue="Team").set(title=ttl)
-    nme=f"{d}"+"_graph_"+str(date.today())
-    sns.saveplot(nme)
+# =============================================================================
+#     nme=f"{d}"+"_graph_"+str(date.today())
+#     sns.saveplot(nme)
+# =============================================================================
     graph=pd.DataFrame({"Game No.":[],"Record":[]})
